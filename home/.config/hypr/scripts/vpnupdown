@@ -1,0 +1,47 @@
+# ******************************************************** #
+#                                                          #
+#                                                          #
+#    vpnupdown                                             #
+#                                                          #
+#    By: Raffael Willems <Raffael.Willems@im-c.de>         #
+#                                                          #
+#    Created: 2023/12/06 13:46:41 by Raffael Willems       #
+#    Updated: 2023/12/06 21:48:41 by Raffael Willems       #
+#                                                          #
+# ******************************************************** #
+
+#!/bin/bash
+msgid="2391293"
+STATUS="$(systemctl is-active openvpn-client@imc.service)"
+
+is_vpn_up() {
+  ip link show dev tun0 &> /dev/null
+}
+
+if [ "${STATUS}" = "inactive" ]; then
+  if [[ $1 == 'toggle' ]]; then
+    systemctl start openvpn-client@imc.service
+
+    # Wait for the interface to get an IP, otherwise ADDR will be unset
+    start_time=$(date +%s)
+    while ! is_vpn_up; do
+      elapsed_time=$((current_time - start_time))
+
+      if [ "$elapsed_time" -ge "5" ]; then       # timeout 
+        break
+      fi 
+      sleep 0.1
+    done
+    ADDR="$(ip -br addr show dev tun0 | awk '{ print $3 }')"
+    notify-send -a "changeNetwork" -u low -i network-receive -r $msgid -t 2000 "VPN Activated $ADDR" 
+  fi
+  text="{\"text\":\"󰌙\",\"tooltip\":\"VPN not active\"}"
+else
+  if [[ $1 == 'toggle' ]]; then
+    systemctl stop openvpn-client@imc.service
+    notify-send -a "changeNetwork" -u low -i network-offline -r $msgid -t 2000 "VPN Deactivated" 
+  fi
+  ADDR="$(ip -br addr show dev tun0 | awk '{ print $3 }')"
+  text="{\"text\":\"󱊪\",\"class\":\"enabled\",\"tooltip\":\"$ADDR\"}"
+fi
+echo $text

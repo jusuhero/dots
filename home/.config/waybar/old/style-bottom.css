@@ -1,0 +1,187 @@
+/* Ju's Waybar Bottom Style 
+Edited, original version by: 
+https://github.com/Axenide/Dotfiles
+*/
+
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+  /* font-family: 'Iosevka'; */
+  /* font-size: 14pt; */
+  font-style: normal;
+  font-family: "GeistMono NF Thin";
+  font-size: 14px;
+  min-height: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+window#waybar {
+  background: transparent;
+  /* border: 2px solid @brblack; */
+  border-radius: 10px;
+  color: @white;
+}
+
+#workspaces {
+  border: solid 0px @red;
+}
+
+#workspaces button {
+  border-radius: 0px;
+  color: @white;
+  border: solid 0px @red;
+  transition: all 0.1s ease-in-out;
+}
+
+#workspaces button.persistent {
+  color: @brblack;
+  border: solid 0px @red;
+}
+
+#workspaces button.active {
+  color: @white;
+  border-bottom: solid 3px @red;
+}
+
+#workspaces button:hover {
+  background-color: transparent;
+  color: @brgreen;
+}
+
+#custom-swww {
+  background: rgb(200, 168, 234);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 176, 69, 1) 59%, rgba(253, 29, 29, 1) 91%);
+  padding: 0px 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border-radius: 14px;
+  color: black;
+  font-size: 17px;
+  background-size: 500% 500%;
+  border-color: rgb(255, 255, 255);
+  animation: gradient 8s linear infinite;
+  font-weight: bolder;
+}
+
+
+
+#clock {
+  color: @brgreen;
+  padding-left: 10px;
+  padding-right: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+  /* border-left: solid 1px @black; */
+}
+
+#custom-launcher {
+  color: @red;
+  background-color: transparent;
+  font-family: 'Symbols Nerd Font';
+  font-size: 20px;
+  padding: 10px 12px 10px 14px;
+  margin-right: 15px;
+}
+
+#custom-playerctl {
+  font-weight: bold;
+}
+
+#cpu,
+#memory,
+#disk,
+#network,
+#custom-gpu-usage,
+#temperature,
+#pulseaudio,
+#battery,
+#custom-ss,
+#custom-weather,
+#custom-hyprpicker,
+#custom-notifications,
+#tray,
+#custom-vpn {
+  background-color: #000000;
+  border-radius: 16px;
+  border: 2px solid #3E425B;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 5px 10px 5px 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  /* border: solid 2px @black; */
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 1px @white;
+}
+
+
+#tray,
+#custom-ss,
+#custom-notification,
+#custom-hyprpicker,
+#custom-vpn {
+  color: @white;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 3px @white;
+}
+
+#custom-ss {
+  font-size: 19px;
+}
+
+#custom-vpn {
+  padding-right: 15px;
+}
+
+#battery {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#backlight {
+  color: @white;
+  font-family: 'Symbols Nerd Font';
+  font-size: 10pt;
+  margin: 0;
+  padding: 0 10px;
+}
+
+
+#bluetooth.connected {
+  color: @brgreen;
+}
+
+#bluetooth.off {
+  color: @brblack;
+}
+
+#pulseaudio.muted {
+  color: @brblack;
+}
+
+#battery.charging {
+  color: @brgreen;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}

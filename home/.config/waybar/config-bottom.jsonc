@@ -1,0 +1,214 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "mode": "dock",
+    "height": 22,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+
+// Position
+// Modules
+	"modules-left": [
+        "custom/left2",
+        "custom/wi",
+        "custom/wifi",  
+        "backlight",
+        "disk",
+        "custom/right5",    
+        "custom/paddc",
+        
+
+        "custom/paddl"
+      ],
+
+	"modules-center": [
+        "custom/paddc",
+        "custom/hyprpicker",
+        "custom/ss",
+        "custom/swww",
+        "custom/notify",
+        "custom/vpntoggle"
+    ],
+
+	"modules-right": [
+        "custom/left6",
+        // connection
+        "custom/right5"
+    ],
+
+ 
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": true,
+        "tooltip-format": "Brightness",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "min-length": 6,
+        "max-length": 6
+    },
+    "custom/wi": {  // TODO: Signal strength
+        "format": "󰤥 ",
+        "tooltip": false
+    },
+
+  "disk": {
+    "interval": 1,
+    "format": "󰋊 {free} ",
+    "tooltip": true,
+    "tooltip-format": "Disk space free"
+    },
+    "custom/notify": {
+        "tooltip": true,
+        "tooltip-format": "Notifications",
+        "format": "{icon}",
+        "format-icons": {
+          "notification": "󰂚<span foreground='#DB4740'><sup></sup></span>",
+          "none": "󰂚",
+          "dnd-notification": "󰂛<span foreground='#DB4740'><sup></sup></span>",
+          "dnd-none": "󰂛",
+          "inhibited-notification": "󰂚<span foreground='#DB4740'><sup></sup></span>",
+          "inhibited-none": "󰂚",
+          "dnd-inhibited-notification": "󰂛<span foreground='#DB4740'><sup></sup></span>",
+          "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true,
+    },
+
+    "custom/ss": {
+        "format": "󰹑 ",
+        "tooltip": true,
+        "tooltip-format": "Screenshot",
+        "on-click": "grimshot copy area",
+        "on-click-right": "~/.config/hypr/scripts/screenshot_to_file"
+    },
+
+    "custom/swww": {
+      "format": "󰓦 ",
+      "tooltip": true,
+      "tooltip-format": "Switch Wallpaper",
+      "on-click": "~/.config/hypr/scripts/cycle_wallpapers"
+    },
+    "custom/vpntoggle": {
+      "format": " {}",
+      "exec": "~/.config/hypr/scripts/vpnupdown status",
+      "tooltip": true,
+      "tooltip-format": "Toggle VPN",
+      "return-type": "json",
+      "interval": 1,
+      "on-click": "~/.config/hypr/scripts/vpnupdown toggle"
+    },
+    "custom/hyprpicker": {
+      "format": "󰈋 ",
+      "tooltip": true,
+      "tooltip-format": "Colorpicker",
+      "on-click": "bash ~/.config/waybar/scripts/hyprpicker-hex.sh",
+      "on-click-right": "bash ~/.config/waybar/scripts/hyprpicker-rgb.sh"
+    },
+
+    "custom/wifi": {
+        "exec": "~/.config/waybar/scripts/network-status.sh",
+        "interval": 30,
+        "format": " {} ",   // use "{}" to display network name
+        "tooltip": true,
+        "tooltip-format": "{}",
+        "on-click": "~/.config/waybar/scripts/network-menu.sh",
+        "min-length": 7,
+        "max-length": 12
+    },
+
+// Padding
+    "custom/paddl": {
+        "format": " ",
+        "tooltip": false
+    },
+    "custom/paddw": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    // Adjust this if you have a long network name so that the modules remain centered.
+    "custom/paddc": {
+        "format": "     ",
+        "tooltip": false
+    },
+
+// Left Arrows
+    "custom/left1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left2": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left3": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left4": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left5": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left6": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left7": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left8": {
+        "format": "",
+        "tooltip": false
+    },
+
+// Right Arrows
+    "custom/right1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right2": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right3": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right4": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right5": {
+        "format": "",
+        "tooltip": false
+    },
+
+// Left Inverse
+    "custom/leftin1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/leftin2": {
+        "format": "",
+        "tooltip": false
+    },
+
+// Right Inverse
+    "custom/rightin1": {
+        "format": "",
+        "tooltip": false
+    }
+}

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Directory to store the screenshots
+screenshot_dir="$HOME/Bilder/screen"
+
+# Make sure the directory exists
+mkdir -p "$screenshot_dir"
+
+# Find the next available screenshot number
+screenshot_num=1
+while [[ -e "$screenshot_dir/screenshot$screenshot_num.png" ]]; do
+    ((screenshot_num++))
+done
+
+# Capture the area using slurp and save it as a temporary file
+temp_file="/tmp/screenshot_temp.png"
+slurp | grim -g - "$temp_file"
+
+# Rename the temporary file to the desired screenshot name
+screenshot_name="screenshot$screenshot_num.png"
+mv "$temp_file" "$screenshot_dir/$screenshot_name"
+
+# Display a notification with the screenshot filename
+notify-send "Screenshot Captured" "Saved as $screenshot_name in $screenshot_dir"
+
