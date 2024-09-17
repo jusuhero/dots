@@ -80,6 +80,8 @@ For more keybinds please look directly into `dots/.config/hypr/keybinds.conf` be
 There are two bars available. Press <kbd>MOD</kbd> + <kbd>B</kbd> for the main bar at the top, press <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd> for the bottom bar (showing mostly hardware information and helper stuff )
 The top waybar is launched on start on Hyprland (see startup script)
 
+I used Mecha Bar by Sejjy as a base (https://github.com/Sejjy/MechaBar), which is a really awesome waybar theme. I have just changed some things according to my liking.
+
 ### Rofi 
 Application Launcher. Press <kbd>MOD</kbd> + <kbd>SPACE</kbd> to select your applications to launch. 
 <kbd>MOD</kbd> + <kbd>W</kbd> launches the wallpaper selector. You can select any wallpaper in ~/.wallpapers/ 
