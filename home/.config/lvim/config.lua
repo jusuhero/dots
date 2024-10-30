@@ -5,7 +5,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 --
 --Theme :
-lvim.colorscheme = "nvimgelion"
+lvim.colorscheme = "pywal16"
 lvim.transparent_window = true
 lvim.plugins = {
   "ChristianChiarulli/swenv.nvim",
@@ -17,6 +17,16 @@ lvim.plugins = {
   "Tsuzat/NeoSolarized.nvim",
   "folke/which-key.nvim",
   "linux-cultist/venv-selector.nvim",
+  "uZer/pywal16.nvim",
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview" },
+    build = "cd app && yarn install", -- Wenn du yarn/npm verwendest
+    ft = { "markdown" },
+    exec = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+  }
 }
 
 -- automatically install python syntax highlighting

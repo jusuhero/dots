@@ -35,6 +35,7 @@
 	"modules-right": [
         "custom/left6",
         // connection
+        // "custom/icinga",
         "custom/right5"
     ],
 
@@ -53,6 +54,12 @@
         "format": "󰤥 ",
         "tooltip": false
     },
+    // "custom/icinga":{
+    //   "exec": "~/.config/waybar/modules/icinga-waybar.py",
+    //   "interval": 100,    
+    //   "format": "<span color='#EA8532'>󱗗 {error_count}</span> <span color='#EA8532'>󰀪 {warning_count}</span>",
+    //   "tooltip": true
+    // },
 
   "disk": {
     "interval": 1,
