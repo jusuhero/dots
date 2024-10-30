@@ -103,8 +103,8 @@
         "format": "{}",
         "separate-outputs": true,
         "rewrite": {
-            "sejjy@archlinux:(.*)": "  $1",
-            "(.*)sejjy@archlinux:~": "  sejjy@archlinux",
+            "ju@ANGKORWAT:(.*)": "  $1",
+            "(.*)ju@ANGKORWAT:~": "  ju@ANGKORWAT",
             "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  $1",
             "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  Firefox",
             "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  $1",
@@ -121,7 +121,7 @@
             "(.*).png": "  $1.png",
             "(.*).svg": "  $1.svg",
             "/": "  File Manager",
-            "": "<span foreground='#cba6f7'></span>  Sejjy 󰅂 Hyprland"
+            "": "<span foreground='#cba6f7'></span>  ju 󰅂 Hyprland"
         },
         "min-length": 5,
         "max-length": 45
