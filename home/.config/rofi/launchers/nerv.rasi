@@ -22,7 +22,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "GeistMono Nerd Font 14";
+    font:                        "Iosevka Nerd Font 16";
     background:                  #000000;
     background-alt:              #2D1E23;
     foreground:                  #DB4740;
@@ -44,7 +44,7 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               0px;
     cursor:                      "default";
     background-color:            @background;
     border:                      2px solid;
@@ -63,7 +63,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/arasaka.png", height);
+    background-image:            url("~/.config/rofi/images/nerv.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
@@ -93,7 +93,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         "  ";
     background-color:            inherit;
     text-color:                  inherit;
 }
