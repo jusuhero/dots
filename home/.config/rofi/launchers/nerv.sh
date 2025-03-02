@@ -11,7 +11,7 @@
 ## style-6     style-7     style-8     style-9     style-10
 
 dir="$HOME/.config/rofi/launchers"
-theme='arasaka'
+theme='nerv'
 
 ## Run
 rofi \
