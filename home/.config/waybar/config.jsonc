@@ -53,7 +53,7 @@
         "custom/left6",
         "pulseaudio",           // output device
 
-        "custom/left7",
+        "custom/left9",
         "custom/cpuinfo",            // brightness
 
         "custom/left8",
@@ -84,7 +84,7 @@
     },
     "hyprland/workspaces": {
         "all-outputs": false,
-        "active-only": false,
+        "active-only": true,
         "on-click": "activate",
         "disable-scroll": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
@@ -269,6 +269,10 @@
         "tooltip": false
     },
     "custom/left8": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left9": {
         "format": "",
         "tooltip": false
     },

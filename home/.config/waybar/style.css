@@ -18,25 +18,21 @@ window#waybar {
 /* Tooltip Styling */
 tooltip {
     color: @color2;
-    background: @background;
-    border: solid;
-    border-width: 1.5px;
-    border-radius: 7px;
-    border-color: @color2;
+    background: black;
 }
 
 /* Workspace Button */
 #workspaces button {
     color: @color2;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: none;
     margin-top: 2px;
     margin-right: 0px;
     margin-bottom: 2px;
     margin-left: 0px;
     padding: 0px;
-    padding-right: 2px;
-    padding-left: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
     animation: ws_normal 20s ease-in-out 1;
 }
 
@@ -92,7 +88,8 @@ tooltip {
 #custom-left5,
 #custom-left6,
 #custom-left7,
-#custom-left8 {
+#custom-left8,
+#custom-left9{
     font-size: 11.5pt;
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
@@ -111,18 +108,11 @@ tooltip {
 }
 
 /* Color Definitions */
-@define-color workspaces    #181825;
-@define-color cpuinfo       #181825;
-@define-color memory        #1e1e2e;
-@define-color arch          #b4befe;
-@define-color time          #313244;
-@define-color date          #1e1e2e;
-@define-color wifi          #1e1e2e;
+@define-color dark-bar    #181825;
+@define-color dark-bar-2          #1e1e2e;
 @define-color pulseaudio    #181825;
 @define-color backlight     #1e1e2e;
 @define-color battery       #313244;
-@define-color power         #b4befe;
-@define-color disk          #1e1e2e;
 /* Window Icon */
 #custom-paddl {
     font-size: 11.5pt;
@@ -138,18 +128,18 @@ tooltip {
 
 /* Workspaces */
 #custom-left1 {
-    color: @workspaces;
+    color: @dark-bar;
     background: @main-bg;
     padding-left: 2px;
 }
 
 #workspaces {
     padding: 0;
-    background: @workspaces;
+    background: @dark-bar;
 }
 
 #custom-right1 {
-    color: @workspaces;
+    color: @dark-bar;
     background: @background;
 }
 
@@ -159,22 +149,22 @@ tooltip {
 }
 
 #custom-left2 {
-    color: @cpuinfo;
+    color: @dark-bar;
     background: @main-bg;
     border-radius: 10px;
     padding-left: 3px;
 }
 
 #custom-cpuinfo {
-    background: @cpuinfo;
-    padding-left: 1px;
+    background: @dark-bar-2;
     padding-right: 0px;
+    padding-left: 0px;
 }
 
 /* Memory */
 #custom-left3 {
     color: @color15;
-    background: @cpuinfo;
+    background: @dark-bar;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
     margin-bottom: -2px;
@@ -202,7 +192,7 @@ tooltip {
 /* directly left of arch logo*/
 #custom-leftin1 {
     color: @color3;
-    font-size: 13pt;
+    font-size: 13.1pt;
     margin-bottom: -2px;
 }
 
@@ -233,8 +223,8 @@ tooltip {
 /* Time */
 #custom-rightin1 {
     color: @color3;
-    font-size: 13pt;
-    margin-bottom: -2px;
+    font-size: 13.1pt;
+    margin-bottom: -3px;
 }
 
 #clock.time {
@@ -255,7 +245,7 @@ tooltip {
 
 #custom-right4 {
     color: @color15;
-    background: @wifi;
+    background: @dark-bar;
 }
 
 
@@ -270,26 +260,28 @@ tooltip {
   font-size: 16px;
   margin-right: 10px;
 }
+
 /* Network */
 #custom-wi{  
-    background: @wifi;
+    background: @dark-bar;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
     margin-right: -2px;
     padding-left: 5px;
 }
 
 #custom-wifi {
-    background: @wifi;
-    padding-right: 0px;
+    background: @dark-bar;
+    padding-right: 5px;
     padding-left: 0px;
 }
 
 #disk {
-    background: @disk;
+    background: @dark-bar;
+    padding-left: 10px;
 }
 
 #custom-right5 {
-    color: @wifi;
+    color: @dark-bar;
     background: @background;
 }
 
@@ -309,6 +301,7 @@ tooltip {
 
 #pulseaudio {
     background: @pulseaudio;
+    padding-right: 8px;
 }
 
 /* Brightness */
@@ -319,14 +312,19 @@ tooltip {
 }
 
 #backlight {
-    background: @backlight;
+    background: @dark-bar;
 }
 
 /* Battery */
 #custom-left8 {
     color: @battery;
-    background: @backlight;
+    background: @dark-bar-2;
     padding-left: 2px;
+}
+
+#custom-left9 {
+    color: @dark-bar-2;
+    background: @dark-bar;
 }
 
 #battery {
