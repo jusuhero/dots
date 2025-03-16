@@ -4,7 +4,6 @@
 CNFG=$HOME/.config
 WALLPAPER_DIR=$HOME/.wallpapers
 START_WALLPAPER=$WALLPAPER_DIR/1.jpg
-TICKET_NOTIFIER=$HOME/GitLab/it-ticket-notifier/
 
 # SWWW Daemon (Wallpaper switcher)
 swww-daemon
@@ -19,16 +18,13 @@ copyq &
 #blueman-manager &
 
 # Load theme 
-wal -f $CNFG/wal/colorschemes/ju.json
+wal -f "$CNFG/wal/colorschemes/ju.json"
 
 # Set wallpaper initially
 swww img --transition-type grow --transition-pos 0.9,0.1 --transition-duration 3 $START_WALLPAPER
 
 # Start Waybar
-$CNFG/waybar/scripts/toggle_bar.sh
-
-# Launch IT-Support Ticket Notifier
-source $TICKET_NOTIFIER/venv/bin/activate && $TICKET_NOTIFIER/ticketnotifier.py & 
+"$CNFG/waybar/scripts/toggle_bar.sh"
 
 # Start authentication agent
 /usr/lib/polkit-kde-authentication-agent-1 &
