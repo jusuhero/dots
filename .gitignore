@@ -1,0 +1,4 @@
+home/.config
+home/.wallpapers/current.wall
+*.log
+!home/.config/(hypr|waybar|kitty|bat|btop|cava|feh|fastfetch|lvim|rofi|swaync|Thunar|tmux|vifm|wal|zathura)

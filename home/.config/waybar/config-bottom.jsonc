@@ -11,12 +11,12 @@
 // Position
 // Modules
 	"modules-left": [
-        "custom/left2",
+        "custom/left1",
         "custom/wi",
         "custom/wifi",  
         "backlight",
         "disk",
-        "custom/right5",    
+        "custom/right1",    
         "custom/paddc",
         
 

@@ -1,14 +1,16 @@
 # Ju's Dotfiles
 
 ### These are the configuration files for my Arch + Hyprland setup
-![setup](resources/dotfiles-3.png)
 
-![setup2](resources/dotfiles-1.png)
+![setup](resources/dotfiles-6.png)
 
+![setup](resources/dotfiles-9.png)
+
+![setup2](resources/dotfiles-8.png)
 
 ## Installation
-
-Only use my dotfiles if you know what you are doing. It is customized to my liking, and some things may be messy, missing and don't work correctly, especially with filepaths. It is mostly meant for reference/inspiration, not to be used by anyone else, but go ahead if you like :) 
+> [!WARNING]  
+> This repository should only be used as reference or inspiration, and is not expected to just work with any setup when cloned. Proceed if you know what you are doing.
 
 Install the needed packages using an AUR Helper of your choice
 ```bash
@@ -30,43 +32,50 @@ Alternatively there is a file `packs` in the root folder which you can install
 
 ## Keybinds
 
+> [!NOTE]
+> By default, the MOD (or $mainMod) key is SUPER (Windows Key)
+
 ### Terminals
 
-<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>T</kbd> = Small floating kitty Terminal
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>T</kbd> = Floating centered terminal
 
 <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>RETURN</kbd> = Fullscreen terminal with big font size
 
-<kbd>ALT</kbd> + <kbd>RETURN</kbd> = Tiled kitty Terminal
+<kbd>MOD</kbd> + <kbd>T</kbd> = Floating centered terminal
+
+<kbd>MOD</kbd> + <kbd>RETURN</kbd> = Tiled kitty Terminal
 
 ### Basic Stuff
-<kbd>MOD</kbd> + <kbd>q</kbd> = kill Window
 
-<kbd>MOD</kbd> + <kbd>e</kbd> = Thunar (File Explorer)
+<kbd>MOD</kbd> + <kbd>Q</kbd> = Kill active window
 
-<kbd>MOD</kbd> + <kbd>s</kbd> = toggle floating
+<kbd>MOD</kbd> + <kbd>E</kbd> = Thunar (File Explorer)
 
-<kbd>MOD</kbd> + <kbd>d</kbd> = Discord
+<kbd>MOD</kbd> + <kbd>S</kbd> = toggle floating
 
-<kbd>MOD</kbd> + <kbd>f</kbd> = Firefox
+<kbd>MOD</kbd> + <kbd>F</kbd> = toggle fullscreen
 
-<kbd>MOD</kbd> + <kbd>r</kbd> = Ranger
+<kbd>MOD</kbd> + <kbd>D</kbd> = Vesktop (Discord)
 
-<kbd>MOD</kbd> + <kbd>b</kbd> = Launch Waybar
+<kbd>MOD</kbd> + <kbd>B</kbd> = Firefox
 
-<kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>b</kbd> = Launch Bottom Waybar
+<kbd>MOD</kbd> + <<kbd>SHIFT</kbd> + kbd>B</kbd> = Chromium
 
-<kbd>MOD</kbd> + <kbd>l</kbd> = Lock screen
+<kbd>MOD</kbd> + <kbd>R</kbd> = Ranger
+
+<kbd>MOD</kbd> + <kbd>H</kbd> = Launch (Top) Waybar
+
+<kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>H</kbd> = Launch (Bottom) Waybar
+
+<kbd>MOD</kbd> + <kbd>L</kbd> = Lock screen
 
 ### Move
-<kbd>ALT</kbd> + left,right,up,down = move focus between windows
+
+<kbd>MOD</kbd> + left,right,up,down = move focus between windows
 
 <kbd>MOD</kbd> + <kbd>1</kbd> - <kbd>9</kbd> = Switch to workspace 
 
 <kbd>ALT</kbd> + <kbd>1</kbd> - <kbd>9</kbd> = Move focused window to workspace 
-
-<kbd>MOD</kbd> + <kbd>Shift</kbd> + <kbd>Up</kbd> = make window big toggle
-
-<kbd>MOD</kbd> + <kbd>Shift</kbd> + <kbd>Down</kbd> = make window fullscreen toggle
 
 ### Exit
 
@@ -77,15 +86,18 @@ For more keybinds please look directly into `dots/.config/hypr/keybinds.conf` be
 ## Programs
 
 ### waybar
-There are two bars available. Press <kbd>MOD</kbd> + <kbd>B</kbd> for the main bar at the top, press <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd> for the bottom bar (showing mostly hardware information and helper stuff )
+There are two bars available. Press <kbd>MOD</kbd> + <kbd>H</kbd> for the main bar at the top, press <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>H</kbd> for the bottom bar.
 The top waybar is launched on start on Hyprland (see startup script)
 
-I used Mecha Bar by Sejjy as a base (https://github.com/Sejjy/MechaBar), which is a really awesome waybar theme. I have just changed some things according to my liking.
+I used an earlier version of Mecha Bar by Sejjy as a base (https://github.com/Sejjy/MechaBar), which is a really awesome waybar theme. I have just changed some things according to my liking.
 
 ### Rofi 
-Application Launcher. Press <kbd>MOD</kbd> + <kbd>SPACE</kbd> to select your applications to launch. 
-<kbd>MOD</kbd> + <kbd>W</kbd> launches the wallpaper selector. You can select any wallpaper in ~/.wallpapers/ 
+Application Launcher. Press <kbd>MOD</kbd> + <kbd>SPACE</kbd> to select your applications to launch. There are two launchers available in `~/.config/rofi/launchers/`
 
+
+<kbd>MOD</kbd> + <kbd>W</kbd> launches the wallpaper selector. You can select any wallpaper in `~/.wallpapers/` 
+
+![soos](resources/dotfiles-5.png)
 ### Feh 
 This is a simple image viewer. `feh .` can be used to display images in the current folder in feh. It is integrated as default app for images in Thunar and vifm.  
 
@@ -122,7 +134,10 @@ This is the notification client. The daemon gets initialized in the hyprland sta
 Allows you to apply color filters. They can be activated by clicking buttons in swaync-client. I sometimes use the blue-light filter but the other ones are just for show off.
 
 ### Hyprlock 
-Locks the screen when pressing <kbd>MOD</kbd> + <kbd>L</kbd>
+
+![setup3](resources/hyprlock.png)
+
+Locks the screen when pressing <kbd>MOD</kbd> + <kbd>L</kbd>. Find confuration in `~/.config/hypr/hyprlock.conf`
 
 ### Hyprpicker 
 This allows you to select a color on the screen and copy the hex code into the clipboard. It can be selected via <kbd>MOD</kbd> + <kbd>X</kbd> keybind or via clicking the pipette icon in the bottom waybar 
@@ -142,4 +157,5 @@ Screenshot/Screencapture works using wf-recorder, grimshot, grim and slurp.
 <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>s</kbd> Swappy: A windows like snipping tool that lets you annotate screenshots before you save them to file or clipboard. 
 
 ### SWWW (Wallpaper switcher)
+
 The wallpapers are in ~/.wallpapers. They can be switched by using the rofi menu <kbd>MOD</kbd> + <kbd>W</kbd> or by clicking the Switch Icon in the bottom waybar.

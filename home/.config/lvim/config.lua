@@ -29,6 +29,17 @@ lvim.plugins = {
   }
 }
 
+lvim.autocommands = {
+  {
+    { "ColorScheme" },
+    {
+      pattern = "*",
+      callback = function()
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#ec2323", underline = true, bold = true })
+      end,
+    },
+  },
+}
 -- automatically install python syntax highlighting
 lvim.builtin.treesitter.ensure_installed = {
   "python",
@@ -50,6 +61,7 @@ lvim.format_on_save.pattern = { "*.py", "*.lua" }
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup { { command = "flake8", args = { "--ignore=E203" }, filetypes = { "python" } }, { name = "shellcheck", args = { "--severity", "warning" } } }
+
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
