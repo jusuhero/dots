@@ -14,7 +14,7 @@
 
 Install the needed packages using an AUR Helper of your choice
 ```bash
-paru -S hyprland waybar bat swww-git gtk3 copyq python-pywal blueman rofi cava wl-clipboard hyprshade wf-recorder swappy grimshot kitty pavucontrol thunar hyprpicker-git swaync-git nm-connection-editor nwg-look python-pynvim pinentry kwindowsystem kguiaddons git make
+paru -S hyprland waybar-cava bat swww-git gtk3 copyq python-pywal blueman rofi cava wl-clipboard hyprshade wf-recorder swappy grimshot kitty pavucontrol thunar hyprpicker-git swaync-git nm-connection-editor nwg-look python-pynvim pinentry kwindowsystem kguiaddons git make
 ```
 
 These are the themes and font I use
@@ -90,6 +90,7 @@ There are two bars available. Press <kbd>MOD</kbd> + <kbd>H</kbd> for the main b
 The top waybar is launched on start on Hyprland (see startup script)
 
 I used an earlier version of Mecha Bar by Sejjy as a base (https://github.com/Sejjy/MechaBar), which is a really awesome waybar theme. I have just changed some things according to my liking.
+The package used is waybar-cava (built with cava support) from AUR instead of normal waybar 
 
 ### Rofi 
 Application Launcher. Press <kbd>MOD</kbd> + <kbd>SPACE</kbd> to select your applications to launch. There are two launchers available in `~/.config/rofi/launchers/`
