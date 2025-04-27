@@ -119,10 +119,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Then copy contents of `dots/.config/tmux` into `~/.config/tmux/` 
 
 ### Neovim 
-I use LunarVim, and have added configuration for different LSPs, and installed some additional cool plugins. 
+<del>I use LunarVim, and have added configuration for different LSPs, and installed some additional cool plugins. 
 See (https://www.lunarvim.org/de/docs/installation) for installation guidance and after that copy 'dots/.config/lvim/*' into '~/.config/lvim/'
-I would recommend setting an alias in zsh or bashrc like this: `alias vim='~/.local/bin/lvim'`
+I would recommend setting an alias in zsh or bashrc like this: `alias vim='~/.local/bin/lvim'` </del>
+
 Probably my favourite plugin is MarkdownPreview which allows previewing Markdown Files in the Browser, neatly formatted and auto-updating.
+
+Since LunarVim has stopped working with newer neovim versions and hasn't been updated since a year I switched to LazyVim (https://www.lazyvim.org/), but haven't configured it yet. My old LunarVim config will still be kept in this repo though.
 
 ### vifm 
 Terminal file explorer. I like it very much. It is configured to show a preview of the file contents at the right side.
