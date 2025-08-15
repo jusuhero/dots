@@ -1,12 +1,9 @@
 #!/usr/bin/bash
 # Hyprland Startup Script
-
 CNFG=$HOME/.config
-WALLPAPER_DIR=$HOME/.wallpapers
-START_WALLPAPER=$WALLPAPER_DIR/4.jpg
 
-# SWWW Daemon (Wallpaper switcher)
-swww-daemon
+# Hyprpaper (Wallpaper switcher)
+hyprpaper &
 
 # Notification client
 swaync & 
@@ -14,17 +11,18 @@ swaync &
 # Clipboard Manager
 # copyq &
 
-# Bluetooth GUI Helper
-#blueman-manager &
+# Bluetooth Tray Icon
+blueman-applet &
+
+# Network Manager Tray Icon
+nm-applet & 
 
 # Load theme 
-wal -f "$CNFG/wal/colorschemes/ju.json" 
-
-# Set wallpaper initially
-swww img --transition-type grow --transition-pos 0.9,0.1 --transition-duration 3 $START_WALLPAPER
+#wal -f "$CNFG/wal/colorschemes/ju.json" 
 
 # Start Waybar
-waybar -c "$CNFG/waybar/config.jsonc" -s "$CNFG/waybar/style.css"  &
+waybar -c $CNFG/waybar/config.jsonc -s $CNFG/waybar/style.css &
+waybar -c $CNFG/waybar/config-bottom.jsonc -s $CNFG/waybar/style.css &
 
 # Launch terminal apps
 kitty --single-instance --title kitty_welcome
