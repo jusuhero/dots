@@ -1,0 +1,42 @@
+theme = "term"
+
+[editor]
+shell = ["fish", "-c"]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-save = false
+idle-timeout = 0
+bufferline = "multiple"
+popup-border = "popup"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "separator", "total-line-numbers", "separator", "spacer", "version-control"]
+right = ["register", "spacer", "diagnostics", "separator", "selections", "separator", "position", "position-percentage", "spacer", "separator", "file-encoding", "file-line-ending", "separator", "file-type"]
+separator = "│"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+# [editor.file-picker]
+# max-depth = 10
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+backspace = { w = ":w", d = ":bc", S-d = ":bca", q = ":q", A-w = ":w!", A-q = ":q!", A-d = ":bc!", A-S-d = ":bca!" }
+S-l = ":bn"
+S-h = ":bp"
+S-right = ":bn"
+S-left = ":bp"
+A-w = ":w"

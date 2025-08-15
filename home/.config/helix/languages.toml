@@ -1,0 +1,90 @@
+[language-server.prettier]
+command = "prettier"
+args = ["--stdin-filepath", "dummy.{extension}"]
+
+[language-server.hyprls]
+command = "hyprls"
+
+[[language]]
+name = "hyprlang"
+language-servers = [ "hyprls" ]
+comment-token = "#"
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config]
+python.analysis.venvPath = "."
+python.analysis.venv = "venv"
+python.analysis.lint = true
+python.analysis.inlayHint.enable = true
+python.analysis.autoSearchPaths = true
+python.analysis.diagnosticMode = "workspace"
+python.analysis.useLibraryCodeForType = true
+python.analysis.logLevel = "Error"
+python.analysis.typeCheckingMode = "off"
+python.analysis.autoImoprtCompletion = true
+python.analysis.reportOptionalSubscript = false
+python.analysis.reportOptionalMemberAccess = false
+
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "-q", "--preview"] 
+
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py", "pyi", "py3", "pyw", "ptl", "rpy", "cpy", "ipy", "pyt", { glob = ".python_history" }, { glob = ".pythonstartup" }, { glob = ".pythonrc" }, { glob = "SConstruct" }, { glob = "SConscript" }]
+shebangs = ["python"]
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json", "requirements.txt", ".venv/"]
+comment-token = "#"
+language-servers = [ {name = "pyright", except-features=["diagnostics"]}, "ruff" ]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-" ] }
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+file-types = ["tsx","ts"]
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "javascript"] }
+auto-format = true
+file-types = ["js", "jsx"]
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "rust"
+language-servers = [ "rust-analyzer" ]
+
+[language-server.rust-analyzer.config]
+checkOnSave = { command = "clippy" }
+
+[language-server.vscode-html-languageserver]
+command = "vscode-html-languageserver"
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server" ]
+
+[[language]]
+name = "config"
+scope = "source.conf"
+file-types = [ "conf" ]
+comment-token = "#"
+roots = []
+indent = { tab-width = 4, unit = "    " }

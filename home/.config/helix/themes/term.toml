@@ -1,0 +1,12 @@
+inherits = "base16_terminal"
+ 
+"ui.background" = { bg = "transparent" }
+
+"ui.selection" = { fg = "#000000", bg = "#f2d8c2" }
+"ui.selection.primary" = { fg = "#E0CDA5", bg = "#44475a" }
+"ui.popup" = { fg = "#E0CDA5" }
+"ui.menu" = { fg = "#E0CDA5" }
+"ui.help" = { fg = "#E0CDA5" }
+"ui.statusline" = { fg = "#EC2323", bg = "#00000" }
+"comment" = { fg = "#EC2323", modifiers = ["italic"] }
+
