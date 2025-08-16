@@ -7,7 +7,7 @@
     min-height: 12px;
 }
 
-@import "/home/ju/.cache/wal/colors-waybar.css";
+@import "./colors.css";
 
 /* Main Background */
 window#waybar {

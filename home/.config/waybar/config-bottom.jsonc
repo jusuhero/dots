@@ -117,8 +117,8 @@
         "format": "󰹑 ",
         "tooltip": true,
         "tooltip-format": "Screenshot",
-        "on-click": "grimshot copy area",
-        "on-click-right": "~/.config/hypr/scripts/screenshot_to_file"
+        "on-click": "fish -c screenshot_selection",
+        "on-click-right": "fish -c screenshot_to_file"
     },
 
     "custom/swww": {
