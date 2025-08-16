@@ -2,6 +2,17 @@
 command = "prettier"
 args = ["--stdin-filepath", "dummy.{extension}"]
 
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "mpls"]
+
+[language-server.mpls]
+command = "mpls"
+config = { markdown.preview.auto = true }
+
+[language-server.marksman]
+command = "marksman"
+
 [language-server.hyprls]
 command = "hyprls"
 
