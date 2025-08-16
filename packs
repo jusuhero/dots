@@ -1,7 +1,7 @@
 neovim
 python
 python-pip
-wl-clipboard-persist
+wl-clip-persist
 cliphist
 ruff
 typescript-language-server
