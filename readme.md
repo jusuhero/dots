@@ -21,6 +21,11 @@ Also there are some AUR packages I am using. Install with an AUR Helper for exam
 ```sh
 paru -S hyprshade-git hyprpicker-git gtk-theme-material-black bibata-cursor-theme se98-icon-theme-git
 ```
+If you like to use greetd as your login manager, enable the service
+```bash
+sudo systemctl enable greetd
+```
+
 ## Keybinds
 
 > [!NOTE]

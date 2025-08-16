@@ -3,6 +3,8 @@ python
 python-pip
 wl-clip-persist
 cliphist
+greetd
+greetd-tuigreet
 ruff
 typescript-language-server
 pyright
