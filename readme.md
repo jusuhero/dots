@@ -7,29 +7,14 @@
 ![setup](resources/dotfiles-9.png)
 
 ![setup2](resources/dotfiles-8.png)
-
 ## Installation
 > [!WARNING]  
 > This repository should only be used as reference or inspiration, and is not expected to just work with any setup when cloned. Proceed if you know what you are doing.
 
 Install the needed packages using an AUR Helper of your choice
 ```bash
-paru -S hyprland waybar-cava bat swww-git gtk3 copyq python-pywal blueman rofi cava wl-clipboard hyprshade wf-recorder swappy grimshot kitty pavucontrol thunar hyprpicker-git swaync-git nm-connection-editor nwg-look python-pynvim pinentry kwindowsystem kguiaddons git make
+paru -S - < pack
 ```
-
-These are the themes and font I use
-```bash
-paru -S gtk-theme-material-black ttf-material-design-icons-extended se98-icon-theme-git bibata-cursor-theme ttf-jetbrains-mono-nerd dracula-icons-git
-```
-
-Some additional apps that I use for various purposes and dependencies you'll need
-```bash
-sudo pacman -S feh vifm firefox vlc neovim tmux zathura playerctl objdump brightnessctl hyprlock fastfetch poppler highlight python-pywalfox python python-pip npm node nodejs yarn cargo ripgrep
-```
-
-Alternatively there is a file `packs` in the root folder which you can install 
-`yay -S - < packs`
-
 ## Keybinds
 
 > [!NOTE]
@@ -99,6 +84,11 @@ Application Launcher. Press <kbd>MOD</kbd> + <kbd>SPACE</kbd> to select your app
 <kbd>MOD</kbd> + <kbd>W</kbd> launches the wallpaper selector. You can select any wallpaper in `~/.wallpapers/` 
 
 ![soos](resources/dotfiles-5.png)
+
+### Fish Shell
+I have recently started using the fish shell and quite like it so far.
+I'm planning on wrapping most scripts this setup uses (hyprland, waybar, utility etc.) into fish functions that can be found in `.config/fish/functions/`
+
 ### Feh 
 This is a simple image viewer. `feh .` can be used to display images in the current folder in feh. It is integrated as default app for images in Thunar and vifm.  
 
@@ -127,6 +117,17 @@ Probably my favourite plugin is MarkdownPreview which allows previewing Markdown
 
 Since LunarVim has stopped working with newer neovim versions and hasn't been updated since a year I switched to LazyVim (https://www.lazyvim.org/), but haven't configured it yet. My old LunarVim config will still be kept in this repo though.
 
+### Helix
+Recently I started using helix as my editor because I feel like it doesn't require as much maintenance as neovim. It also has many helpful plugins preinstalled with sane defaults, making configuration needs slim. The configuration contains some base options, as well as language servers for python, javascript, typescript etc.
+Make sure the needed language servers are installed:
+```bash
+sudo pacman -S --needed ruff typescript-language-server pyright prettier vscode-html-languageserver
+```
+For Markdown Preview in browser (mpls) install it with go
+```bash
+go install github.com/mhersson/mpls@latest
+```
+
 ### vifm 
 Terminal file explorer. I like it very much. It is configured to show a preview of the file contents at the right side.
 It also works with image previews. Upon pressing  <kbd>Right arrow</kbd> the image is then opened in feh in fullscreen, allowing cycling through the images.
@@ -147,7 +148,7 @@ Locks the screen when pressing <kbd>MOD</kbd> + <kbd>L</kbd>. Find confuration i
 This allows you to select a color on the screen and copy the hex code into the clipboard. It can be selected via <kbd>MOD</kbd> + <kbd>X</kbd> keybind or via clicking the pipette icon in the bottom waybar 
 
 ### Screenshot
-Screenshot/Screencapture works using wf-recorder, grimshot, grim and slurp. 
+Screenshot/Screencapture works using wf-recorder, grim and slurp. 
 <kbd>MOD</kbd> + <kbd>v</kbd> will create a screencapture with audio. Specify the video folder it should upload to inside the script in Hyprland/script folder.
 
 <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>v</kbd> will end the recording and kill wf-recorder.
@@ -160,6 +161,6 @@ Screenshot/Screencapture works using wf-recorder, grimshot, grim and slurp.
 
 <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>s</kbd> Swappy: A windows like snipping tool that lets you annotate screenshots before you save them to file or clipboard. 
 
-### SWWW (Wallpaper switcher)
+### Hyprpaper (Wallpaper)
 
-The wallpapers are in ~/.wallpapers. They can be switched by using the rofi menu <kbd>MOD</kbd> + <kbd>W</kbd> or by clicking the Switch Icon in the bottom waybar.
+The wallpapers are in ~/.wallpapers by default - this is set in ~/.config/hypr/env.conf. The wallpapers can be switched by using the rofi menu <kbd>MOD</kbd> + <kbd>W</kbd> or by clicking the Switch Wallpaper Icon in the bottom waybar.
