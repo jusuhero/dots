@@ -20,7 +20,7 @@ slurp
 kvantum
 qt5ct
 xdg-desktop-portal-hyprland
-rofi
+rofi-wayland
 cava
 firefox
 waybar
