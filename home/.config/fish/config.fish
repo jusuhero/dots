@@ -25,6 +25,7 @@ alias fastfetch='fastfetch --logo ~/.config/fastfetch/asuka.png --logo-type kitt
 set -gx EDITOR helix
 set -gx VOLUME_STEP 5
 set -gx BRIGHTNESS_STEP 5
+set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
 set -gx PATH $HOME/.cargo/bin $PATH
 set -gx PATH $HOME/go/bin $PATH
 
