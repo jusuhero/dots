@@ -1,13 +1,10 @@
 function screenshot_to_file
-    # Directory to store the screenshots
-    set screenshot_dir "$HOME/Bilder/screen"
-
     # Make sure the directory exists
-    mkdir -p "$screenshot_dir"
+    mkdir -p "$SCREENSHOT_DIR"
 
     # Find the next available screenshot number
     set screenshot_num 1
-    while test -e "$screenshot_dir/screenshot$screenshot_num.png"
+    while test -e "$SCREENSHOT_DIR/screenshot$screenshot_num.png"
         set screenshot_num (math $screenshot_num + 1)
     end
 
@@ -19,8 +16,8 @@ function screenshot_to_file
 
     # Final screenshot name
     set screenshot_name "screenshot$screenshot_num.png"
-    mv "$temp_file" "$screenshot_dir/$screenshot_name"
+    mv "$temp_file" "$SCREENSHOT_DIR/$screenshot_name"
 
     # Notify the user
-    notify-send "Screenshot Captured" "Saved as $screenshot_name in $screenshot_dir"
+    notify-send "Screenshot Captured" "Saved as $screenshot_name in $SCREENSHOT_DIR"
 end
