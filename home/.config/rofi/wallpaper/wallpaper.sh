@@ -1,7 +1,5 @@
 #!/bin/bash
 
-WALLPAPERS_DIR=$HOME/.wallpapers
-
 # find image size to display (very slow)
 #echo $(identify -format '%[fx:w]x%[fx:h]\' ~/Pictures/$A 2>/dev/null)
 
@@ -18,12 +16,12 @@ theme="$HOME/.config/rofi/wallpaper/style.rasi"
 ROFI_CMD="rofi -dmenu -i -show-icons -window-title walls -theme-str $(build_theme 3 5 6) -theme ${theme}"
 
 choice=$(\
-    ls --escape "$WALLPAPERS_DIR" | \
-        while read A; do echo -en "$A\x00icon\x1f$WALLPAPERS_DIR/$A\n"; done | \
+    ls --escape "$WALLPAPER_DIR" | \
+        while read A; do echo -en "$A\x00icon\x1f$WALLPAPER_DIR/$A\n"; done | \
         $ROFI_CMD -p "󰸉  Wallpaper" \
 )
 
-wallpaper="$WALLPAPERS_DIR/$choice"
+wallpaper="$WALLPAPER_DIR/$choice"
 
 if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
     echo "$wallpaper"
@@ -42,8 +40,9 @@ elif [ "$XDG_CURRENT_DESKTOP" = "sway" ]; then
 
     exit 0
 else
-    swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration 1 --transition-step 255 --transition-fps 60 "$wallpaper" && \
-    ln -sf "$wallpaper" "$WALLPAPERS_DIR"/current.wall
+    echo $wallpaper
+	fish -c "switch_wall '${wallpaper}'"
+    ln -sf "$wallpaper" "$WALLPAPER_DIR"/current.wall
 fi
 
 exit 1
