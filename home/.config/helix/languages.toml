@@ -8,6 +8,7 @@ language-servers = ["marksman", "mpls"]
 
 [language-server.mpls]
 command = "mpls"
+args = ["--dark-mode", "--enable-footnotes", "--enable-emoji", "--enable-wikilinks"]
 config = { markdown.preview.auto = true }
 
 [language-server.marksman]
