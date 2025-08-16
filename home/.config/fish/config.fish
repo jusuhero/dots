@@ -34,5 +34,12 @@ set fish_cursor_default block
 set fish_cursor_insert line blink
 set fish_cursor_visual underscore blink
 
+# Greeting
+set -g fish_greeting ""
+if type -q fastfetch
+	fastfetch
+end
+
+# Setup
 starship init fish | source
 zoxide init fish | source
