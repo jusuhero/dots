@@ -1,6 +1,8 @@
 neovim
 python
 python-pip
+wl-clipboard-persist
+cliphist
 ruff
 typescript-language-server
 pyright
@@ -9,8 +11,13 @@ go
 marksman
 vscode-html-languageserver
 wl-clipboard
+uwsm
+pamixer
 grim
 slurp
+kvantum
+qt5ct
+xdg-desktop-portal-hyprland
 rofi
 cava
 firefox
@@ -19,7 +26,6 @@ hyprland
 hyprlock
 hyprpaper
 hyprcursor
-hyprshade
 playerctl
 fish
 starship
@@ -30,8 +36,7 @@ swappy
 kitty
 pavucontrol
 thunar
-hyprpicker-git
-swaync-git 
+swaync
 nm-connection-editor
 network-manager-applet
 nwg-look
@@ -50,12 +55,8 @@ tmux
 zathura
 playerctl
 brightnessctl 
-gtk-theme-material-black
-bibata-cursor-theme
 dracula-icons-git
-ttf-material-design-icons-extended
 ttf-jetbrains-mono-nerd
-objdump
 kwindowsystem
 kguiaddons
 git 
@@ -63,7 +64,4 @@ make
 npm
 cargo
 ripgrep
-se98-icon-theme-git
 nodejs
-
-

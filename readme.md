@@ -11,9 +11,15 @@
 > [!WARNING]  
 > This repository should only be used as reference or inspiration, and is not expected to just work with any setup when cloned. Proceed if you know what you are doing.
 
-Install the needed packages using an AUR Helper of your choice
-```bash
-paru -S - < pack
+Clone the repo, navigate to the directory and install the needed packages using pacman
+```sh
+git clone https://github.com/jusuhero/dots.git
+cd dots
+sudo pacman -S - < packs
+```
+Also there are some AUR packages I am using. Install with an AUR Helper for example paru or yay
+```sh
+paru -S hyprshade-git hyprpicker-git gtk-theme-material-black bibata-cursor-theme se98-icon-theme-git
 ```
 ## Keybinds
 
