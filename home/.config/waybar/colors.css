@@ -1,0 +1,24 @@
+/* waybar-colors.css */
+
+/* Special colors */
+@define-color background #000000;
+@define-color foreground #ea8532;
+@define-color cursor     #ffffff;
+
+/* Standard colors */
+@define-color color0  #000000;
+@define-color color1  #ec2323;
+@define-color color2  #ea8232;
+@define-color color3  #f99d53;
+@define-color color4  #9c0000;
+@define-color color5  #1f641f;
+@define-color color6  #CF583F;
+@define-color color7  #958B83;
+@define-color color8  #000000;
+@define-color color9  #ec2323;
+@define-color color10 #ea8232;
+@define-color color11 #f99d53;
+@define-color color12 #640000;
+@define-color color13 #1f641f;
+@define-color color14 #CF583F;
+@define-color color15 #d4ccb9;
