@@ -25,7 +25,10 @@ If you like to use greetd as your login manager, enable the service
 ```bash
 sudo systemctl enable greetd
 ```
-
+and in `/etc/greetd/config.toml` change the command line to
+```sh
+command = "tuigreet --time --cmd 'uwsm start Hyprland'"
+```
 ## Keybinds
 
 > [!NOTE]
