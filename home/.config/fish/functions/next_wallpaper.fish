@@ -1,9 +1,12 @@
 function next_wallpaper
-    set -l TMP "/tmp/current_wall"
-    set -l WALLPAPERS (ls -1 ~/.wallpapers/* | sort)
+    set -l TMP /tmp/current_wall
+    set -l DIR (realpath ~/.wallpapers)
+
+    # Build a sorted list of absolute paths
+    set -l WALLPAPERS (printf '%s\n' $DIR/* | sort -V)
 
     if not test -f $TMP
-        echo 0 > $TMP
+        echo 0 >$TMP
     end
 
     set -l i (cat $TMP)
@@ -13,11 +16,12 @@ function next_wallpaper
     if test $i -ge $count
         set i 0
     end
+    echo $i >$TMP
 
-    echo $i > $TMP
-
-    # Fish arrays are 1-based, so we add 1 to the index
     set -l index (math "$i + 1")
     set -l next_wallpaper $WALLPAPERS[$index]
+
+    echo "Switching to: $next_wallpaper"
+
     switch_wall "$next_wallpaper"
 end
