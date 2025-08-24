@@ -36,8 +36,8 @@ set fish_cursor_visual underscore blink
 
 # Greeting
 set -g fish_greeting ""
-if type -q fastfetch
-	fastfetch
+if type -q fastfetch && status is-interactive
+    fastfetch
 end
 
 # Setup
