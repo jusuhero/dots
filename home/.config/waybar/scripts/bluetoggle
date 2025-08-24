@@ -11,11 +11,10 @@ toggle_bluetooth() {
     echo "Bluetooth disconnected"
   else
     bluetoothctl power on
-    notify-send -a "bluetooth" -u low -i bluetooth -r $MSGID -t 2000 "Bluetooth connectedd!"
+    notify-send -a "bluetooth" -u low -i bluetooth -r $MSGID -t 2000 "Bluetooth connected!"
     echo "Bluetooth connected!"
   fi
 }
 
 # Llamar a la función para alternar el estado de Bluetooth
 toggle_bluetooth
-
