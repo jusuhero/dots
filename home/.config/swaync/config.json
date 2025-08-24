@@ -33,7 +33,7 @@
     ],
     "widget-config": {
         "title": {
-            "text": "Notification Center",
+            "text": "Notifications",
             "clear-all-button": true,
             "button-text": "󰆴 Clear All"
         },
@@ -51,19 +51,19 @@
         "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰏘",
+                    "label": "Vibrance",
                     "command": "hyprshade toggle vibrance"
                 },
                 {
-                    "label": "󰌶",
+                    "label": "Blue light",
                     "command": "hyprshade toggle blue-light-filter"
                 },
                 {
-                    "label": "󰗝",
+                    "label": "Invert",
                     "command": "hyprshade toggle invert-colors"
                 },
                 {
-                    "label": "󰋰",
+                    "label": "Gray",
                     "command": "hyprshade toggle grayscale"
                 }
             ]
