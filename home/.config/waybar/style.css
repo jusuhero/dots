@@ -248,7 +248,9 @@ tooltip {
     background: @dark-bar;
 }
 
-
+#custom-icinga {
+  margin-right: 15px;
+}
 /* Bottom Bar */ 
 #custom-ss,
 #custom-hyprpicker,

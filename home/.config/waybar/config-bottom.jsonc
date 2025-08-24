@@ -18,7 +18,6 @@
         "disk",
         "custom/right1",    
         "custom/paddc",
-        
 
         "custom/paddl"
       ],
@@ -35,7 +34,7 @@
 	"modules-right": [
         // "custom/left6",
         // connection
-        // "custom/icinga",
+        "custom/icinga",
         "cava"
         // "custom/right5"
     ],
@@ -78,12 +77,14 @@
                    "on-click-right": "mode"
                    }
     },
-    // "custom/icinga":{
-    //   "exec": "~/.config/waybar/modules/icinga-waybar.py",
-    //   "interval": 100,    
-    //   "format": "<span color='#EA8532'>󱗗 {error_count}</span> <span color='#EA8532'>󰀪 {warning_count}</span>",
-    //   "tooltip": true
-    // },
+  "custom/icinga":{
+    "exec": "python ~/.config/waybar/scripts/icinga-waybar.py",
+    // "format": "<span color='#EA8532'>󱗗 {error_count}</span> <span color='#EA8532'>󰀪 {warning_count}</span>",
+    "interval": "60",
+    "format": "{}",
+    "return-type": "json",
+    "tooltip": true
+  },
 
   "disk": {
     "interval": 1,
@@ -116,7 +117,7 @@
     "custom/ss": {
         "format": "󰹑 ",
         "tooltip": true,
-        "tooltip-format": "Screenshot",
+        "tooltip-format": "Screenshot\nLeft click: Screenshot selection\nRight click: Screenshot to file",
         "on-click": "fish -c screenshot_selection",
         "on-click-right": "fish -c screenshot_to_file"
     },
@@ -124,24 +125,24 @@
     "custom/swww": {
       "format": "󰓦 ",
       "tooltip": true,
-      "tooltip-format": "Switch Wallpaper",
-      "on-click": "~/.config/hypr/scripts/cycle_wallpapers"
+      "tooltip-format": "Next Wallpaper",
+      "on-click": "fish -c 'next_wallpaper'"
     },
     "custom/vpntoggle": {
       "format": " {}",
-      "exec": "~/.config/hypr/scripts/vpnupdown status",
+      "exec": "fish -c 'vpnupdown status'",
       "tooltip": true,
       "tooltip-format": "Toggle VPN",
       "return-type": "json",
       "interval": 1,
-      "on-click": "~/.config/hypr/scripts/vpnupdown toggle"
+      "on-click": "fish -c 'vpnupdown toggle'"
     },
     "custom/hyprpicker": {
       "format": "󰈋 ",
       "tooltip": true,
-      "tooltip-format": "Colorpicker",
-      "on-click": "bash ~/.config/waybar/scripts/hyprpicker-hex.sh",
-      "on-click-right": "bash ~/.config/waybar/scripts/hyprpicker-rgb.sh"
+      "tooltip-format": "Colorpicker\nLeft click: Pick hex color\nRight click: Pick rgb color",
+      "on-click": "fish -c 'hyprpicker_hex'",
+      "on-click-right": "fish -c 'hyprpicker_rgb'"
     },
 
     "custom/wifi": {
@@ -150,7 +151,7 @@
         "format": " {} ",   // use "{}" to display network name
         "tooltip": true,
         "tooltip-format": "{}",
-        "on-click": "~/.config/waybar/scripts/network-menu.sh",
+        "on-click": "nm-connection-editor",
         "min-length": 7,
         "max-length": 12
     },
