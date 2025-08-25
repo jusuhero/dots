@@ -19,7 +19,8 @@ sudo pacman -S - < packs
 ```
 Also there are some AUR packages I am using. Install with an AUR Helper for example paru or yay
 ```sh
-paru -S hyprshade-git hyprpicker-git gtk-theme-material-black bibata-cursor-theme se98-icon-theme-git
+paru -S hyprshade-git bibata-cursor-theme waybar-cava se98-icon-theme-git
+
 ```
 If you like to use greetd as your login manager, enable the service
 ```bash
@@ -29,6 +30,12 @@ and in `/etc/greetd/config.toml` change the command line to
 ```sh
 command = "tuigreet --time --cmd 'uwsm start Hyprland'"
 ```
+For gtk theme I use Numix-Black-Pomegranate which does not exist as a package yet as far as I know.
+To install, copy it from the themes directory in this repo. Assuming you are in the project folder:
+```sh
+sudo cp home/.themes/Numix-BLACK-Pomegranate /usr/share/themes/
+```
+
 ## Keybinds
 
 > [!NOTE]
@@ -135,7 +142,7 @@ Since LunarVim has stopped working with newer neovim versions and hasn't been up
 Recently I started using helix as my editor because I feel like it doesn't require as much maintenance as neovim. It also has many helpful plugins preinstalled with sane defaults, making configuration needs slim. The configuration contains some base options, as well as language servers for python, javascript, typescript etc.
 Make sure the needed language servers are installed:
 ```bash
-sudo pacman -S --needed ruff typescript-language-server pyright prettier vscode-html-languageserver
+sudo pacman -S --needed ruff typescript-language-server pyright prettier vscode-html-languageserver marksman
 ```
 For Markdown Preview in browser (mpls) install it with go
 ```bash
