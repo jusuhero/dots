@@ -11,18 +11,26 @@
 > [!WARNING]  
 > This repository should only be used as reference or inspiration, and is not expected to just work with any setup when cloned. Proceed if you know what you are doing.
 
+> **Note**: This configuration has been designed for Arch Linux (and derivatives). Using it on other distributions may require changes.
+
+
 Clone the repo, navigate to the directory and install the needed packages using pacman
 ```sh
 git clone https://github.com/jusuhero/dots.git
 cd dots
-sudo pacman -S - < packs
+sudo pacman -S - $(< packs)
 ```
-Also there are some AUR packages I am using. Install with an AUR Helper for example paru or yay
+Also there are some AUR packages I am using. Install with an AUR Helper, for example paru or yay
 ```sh
-paru -S hyprshade-git bibata-cursor-theme waybar-cava se98-icon-theme-git
+paru -S hyprshade-git bibata-cursor-theme waybar-cava
 
 ```
-If you like to use greetd as your login manager, enable the service
+Use rsync to copy configs from the repo to your home directory. Existing files will be backed up with a .bak suffix:
+```bash
+rsync -avh --backup --suffix=.bak home/ ~/
+```
+
+**Optional:** If you like to use greetd as your login manager, enable the service
 ```bash
 sudo systemctl enable greetd
 ```
@@ -30,11 +38,8 @@ and in `/etc/greetd/config.toml` change the command line to
 ```sh
 command = "tuigreet --time --cmd 'uwsm start Hyprland'"
 ```
-For gtk theme I use Numix-Black-Pomegranate which does not exist as a package yet as far as I know.
-To install, copy it from the themes directory in this repo. Assuming you are in the project folder:
-```sh
-sudo cp home/.themes/Numix-BLACK-Pomegranate /usr/share/themes/
-```
+
+Log out and back in and changes should be active.
 
 ## Keybinds
 

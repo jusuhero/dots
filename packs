@@ -19,6 +19,7 @@ grim
 slurp
 kvantum
 qt5ct
+qt6ct
 xdg-desktop-portal-hyprland
 rofi-wayland
 cava
@@ -60,6 +61,7 @@ playerctl
 brightnessctl 
 dracula-icons-git
 ttf-jetbrains-mono-nerd
+ttf-3270-nerd
 kwindowsystem
 kguiaddons
 git 
