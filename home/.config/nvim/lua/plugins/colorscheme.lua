@@ -1,12 +1,24 @@
 return {
-  -- add gruvbox
-  { "uZer/pywal16.nvim" },
-
-  -- Configure LazyVim to load gruvbox
+  {
+    "Koalhack/darcubox-nvim",
+    config = function()
+      require("darcubox").setup({
+        options = {
+          transparent = true,
+          styles = {
+            comments = { italic = true },
+            functions = { bold = true },
+            keywords = { italic = true },
+            types = { italic = true, bold = true },
+          },
+        },
+      })
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "pywal16",
+      colorscheme = "darcubox",
     },
   },
 }
