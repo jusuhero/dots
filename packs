@@ -1,6 +1,8 @@
 neovim
 python
 python-pip
+python-requests
+htop
 wl-clip-persist
 cliphist
 greetd
@@ -24,7 +26,6 @@ xdg-desktop-portal-hyprland
 rofi-wayland
 cava
 firefox
-waybar
 hyprland
 hyprpicker
 hyprlock

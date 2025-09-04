@@ -18,11 +18,11 @@ Clone the repo, navigate to the directory and install the needed packages using 
 ```sh
 git clone https://github.com/jusuhero/dots.git
 cd dots
-sudo pacman -S - $(< packs)
+sudo pacman -S $(cat packs)
 ```
 Also there are some AUR packages I am using. Install with an AUR Helper, for example paru or yay
 ```sh
-paru -S hyprshade-git bibata-cursor-theme waybar-cava
+paru -S hyprshade-git bibata-cursor-git waybar-cava tty-clock
 
 ```
 Use rsync to copy configs from the repo to your home directory. Existing files will be backed up with a .bak suffix:
