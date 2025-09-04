@@ -2,10 +2,10 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ju/.gtkrc-2.0.mine"
-gtk-theme-name="Material-Black-Cherry"
+gtk-theme-name="Numix-BLACK-Pomegranate"
 gtk-icon-theme-name="Dracula"
-gtk-font-name="JetBrainsMonoNL Nerd Font Mono Ultra-Light 10"
-gtk-cursor-theme-name="Bibata-Modern-Ice"
+gtk-font-name="Adwaita Sans 11"
+gtk-cursor-theme-name="default"
 gtk-cursor-theme-size=24
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
