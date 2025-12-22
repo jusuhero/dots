@@ -4,7 +4,7 @@
 # source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 gpg-connect-agent UPDATESTARTUPTTY /bye >/dev/null # needed for gpg agent
-
+alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 # Aliases
 alias grep='grep --color=auto'
 alias conf='z ~/.config'

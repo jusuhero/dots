@@ -12,10 +12,11 @@
 	"modules-left": [
         "custom/paddl",
         "custom/ws",            // window icon
-        "custom/left1",
+        "custom/paddl",
+        // "custom/left1",
 
         "hyprland/workspaces",  // workspaces
-        "custom/right1",
+        // "custom/right1",
 
         "custom/paddw",
         "hyprland/window"       // window title
@@ -89,7 +90,7 @@
         "disable-scroll": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
-        "sort-by-number": true
+        "sort-by-number": true,
     },
 
     "hyprland/window": {
@@ -183,8 +184,8 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "婢 {volume}%",
+        "format": "  {volume}%",
+        "format-muted": "  {volume}%",
         "format-icons": {
             "headphone": "󰋋",
             "default": ["󰖀", "󰕾"]
