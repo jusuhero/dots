@@ -1,0 +1,18 @@
+{
+  "panel": {
+    "cpuLabel": "CPU: {usage}%",
+    "title": "Catwalk"
+  },
+  "settings": {
+    "currentThreshold": "Huidige drempelwaarde: {value}%",
+    "minimumThreshold": {
+      "description": "CPU-gebruik moet boven dit percentage liggen voordat de kat begint te rennen.",
+      "label": "Minimale CPU-drempel"
+    },
+    "title": "Catwalk Instellingen"
+  },
+  "tooltip": {
+    "running": "Kat rent",
+    "sleeping": "Kat slaapt"
+  }
+}

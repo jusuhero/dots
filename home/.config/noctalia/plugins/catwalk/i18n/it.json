@@ -1,0 +1,18 @@
+{
+  "panel": {
+    "cpuLabel": "CPU: {usage}%",
+    "title": "Catwalk"
+  },
+  "settings": {
+    "currentThreshold": "Soglia attuale: {value}%",
+    "minimumThreshold": {
+      "description": "L'utilizzo della CPU deve essere superiore a questa percentuale affinché il gatto inizi a correre",
+      "label": "Soglia minima CPU"
+    },
+    "title": "Impostazioni Catwalk"
+  },
+  "tooltip": {
+    "running": "Il gatto sta correndo",
+    "sleeping": "Il gatto sta dormendo"
+  }
+}

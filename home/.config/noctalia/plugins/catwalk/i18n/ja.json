@@ -1,0 +1,18 @@
+{
+  "panel": {
+    "cpuLabel": "CPU: {usage}%",
+    "title": "Catwalk"
+  },
+  "settings": {
+    "currentThreshold": "現在のしきい値: {value}%",
+    "minimumThreshold": {
+      "description": "猫が走り始めるにはCPU使用率がこの割合を超えている必要があります",
+      "label": "最小CPUしきい値"
+    },
+    "title": "Catwalk設定"
+  },
+  "tooltip": {
+    "running": "猫が走っています",
+    "sleeping": "猫が寝ています"
+  }
+}
