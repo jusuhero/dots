@@ -1,0 +1,14 @@
+input {
+    keyboard {
+        repeat-rate 35
+        repeat-delay 200
+        xkb {
+              layout "de,us"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+    focus-follows-mouse
+}

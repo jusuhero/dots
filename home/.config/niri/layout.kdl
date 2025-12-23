@@ -1,0 +1,42 @@
+layout {
+    gaps 5
+
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+
+    }
+
+    default-column-width { proportion 0.5; }
+
+    border {
+        width 10
+        active-color "#ff9e64"
+        inactive-color "#1f2335"
+    }
+
+    focus-ring {
+        width 4
+        active-color "#f99d53"
+        inactive-color "#0000"
+    }
+    
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    // Struts shrink the area occupied by windows
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}

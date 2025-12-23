@@ -1,0 +1,21 @@
+
+include "input.kdl"
+include "outputs.kdl"
+include "layout.kdl"
+include "spawn-at-startup.kdl"
+include "recent-windows.kdl"
+include "env.kdl"
+include "rules.kdl"
+include "binds.kdl"
+include "./noctalia.kdl"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot From %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+hotkey-overlay {
+    skip-at-startup
+}
+gestures {
+    hot-corners {
+        off
+    }
+}

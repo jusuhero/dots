@@ -1,0 +1,19 @@
+recent-windows {
+    debounce-ms 750
+    open-delay-ms 150
+
+    highlight {
+        active-color "#d8dadd"
+        padding 30
+        corner-radius 10
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+
+    binds {
+        Alt+Tab { next-window; }
+    }
+}

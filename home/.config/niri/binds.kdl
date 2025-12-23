@@ -1,0 +1,91 @@
+binds {
+    Mod+Return      { spawn-sh "kitty --single-instance --title kitty_tiled"; }
+    Mod+T           { spawn-sh "kitty --single-instance --title ju@ANGKORWAT";}
+    Mod+Ctrl+Return { spawn-sh "fuzzel --config $NIRICONF/fuzzel/fuzzel.ini"; }
+    Mod+B           { spawn-sh "firefox"; }
+    Mod+E           { spawn-sh "thunar"; }
+    Mod+L           { spawn-sh "hyprlock"; }
+    Mod+C           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
+    Mod+W           { spawn-sh "~/.config/rofi/wallpaper/wallpaper.sh"; }
+    Mod+H           { spawn-sh "fish -c 'toggle-waybar top'";}
+    Mod+Shift+H     { spawn-sh "fish -c 'toggle-waybar bottom'";}
+    Mod+D           { spawn "vesktop";}
+    Mod+N            { spawn "swaync-client -t -sw";}
+    Mod+SPACE hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/launchers/eva.sh"; }
+    // Backlight and Audio
+    XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "brightnessctl set +5%" ; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl set 5%-" ; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioPlay         allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPause        allow-when-locked=true { spawn-sh "playerctl pause"; }
+    XF86AudioNext         allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPrev         allow-when-locked=true { spawn-sh "playerctl previous"; }
+
+    // Windows and Columns
+    Mod+Q                { close-window; }
+    Mod+S                { toggle-window-floating; }
+    Mod+M                { maximize-column; }
+    Mod+F                { maximize-window-to-edges; }
+    Mod+Shift+F          { fullscreen-window;}
+    Mod+Left             { focus-column-left; }
+    Mod+Right            { focus-column-right; }
+    Mod+Down             { focus-window-down; }
+    Mod+Up               { focus-window-up; }
+    Mod+Ctrl+Left        { move-column-left; }
+    Mod+Ctrl+Right       { move-column-right; }
+    Mod+Ctrl+Down        { move-window-down; }
+    Mod+Ctrl+Up          { move-window-up; }
+    Mod+Home             { focus-column-first; }
+    Mod+End              { focus-column-last; }
+    Mod+Ctrl+Home        { move-column-to-first; }
+    Mod+Ctrl+End         { move-column-to-last; }
+    Mod+Shift+Left       { set-column-width "-10%"; }
+    Mod+Shift+Right      { set-column-width "+10%"; }
+    Mod+Shift+Up         { set-window-height "-10%"; }
+    Mod+Shift+Down       { set-window-height "+10%"; }
+    Mod+BracketLeft      { consume-or-expel-window-left; }
+    Mod+BracketRight     { consume-or-expel-window-right; }
+    Mod+Comma            { consume-window-into-column; }
+    Mod+Period           { expel-window-from-column; }
+
+    // Workspaces
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Alt+1         { move-column-to-workspace 1; }
+    Mod+Alt+2         { move-column-to-workspace 2; }
+    Mod+Alt+3         { move-column-to-workspace 3; }
+    Mod+Alt+4         { move-column-to-workspace 4; }
+    Mod+Alt+5         { move-column-to-workspace 5; }
+    Mod+Alt+6         { move-column-to-workspace 6; }
+    Mod+Alt+7         { move-column-to-workspace 7; }
+    Mod+Alt+8         { move-column-to-workspace 8; }
+    Mod+Alt+9         { move-column-to-workspace 9; }
+    Mod+Alt+0         { move-column-to-workspace 10; }
+    Mod+O              { toggle-overview; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+
+    // Screenshots
+    Print       { screenshot; }
+    Ctrl+Print  { screenshot-window; }
+    Shift+Print { screenshot-screen; }
+
+    Mod+Shift+S           { spawn-sh "grim -g '$(slurp)'' - | swappy -f -"; }
+    Mod+Shift+P           { spawn-sh "fish -c screenshot_to_file";}
+    Mod+P           { spawn-sh "fish -c screenshot_selection";}
+
+    Mod+V           {spawn-sh "fish -c screenrecord_area";}
+    Mod+Shift+V     {spawn-sh "killall -s SIGINT wf-recorder";}
+}

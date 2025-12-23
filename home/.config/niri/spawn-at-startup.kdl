@@ -1,0 +1,2 @@
+spawn-sh-at-startup "blueman-applet"
+spawn-sh-at-startup "fish -c 'niri_startup'"
