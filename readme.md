@@ -43,11 +43,12 @@ Log out and back in and changes should be active.
 
 > [!NOTE]  
 > I recently started experimenting with the window manager niri, therefore I have also included my niri config here. I use niri with the noctalia shell. If you want to use it install the following package and copy the `home/.config/niri` folder from this repo into your config directory.
-![niri](resources/niri.png)
-
 ```
 paru -S noctalia-shell
 ```
+![niri](resources/niri.png)
+
+
 
 
 ## Keybinds
