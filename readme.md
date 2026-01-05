@@ -36,7 +36,7 @@ sudo systemctl enable greetd
 ```
 and in `/etc/greetd/config.toml` change the command line to
 ```sh
-command = "tuigreet --time --cmd 'uwsm start Hyprland'"
+command = "tuigreet --time --cmd 'uwsm start -eD Hyprland hyprland.desktop'"
 ```
 
 Log out and back in and changes should be active.
