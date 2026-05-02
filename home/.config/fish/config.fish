@@ -20,7 +20,9 @@ alias fishrc='$EDITOR ~/.config/fish/config.fish'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias lsblk='lsblk -o name,mountpoint,label,size,uuid'
 alias fastfetch='fastfetch --logo ~/.config/fastfetch/asuka.png --logo-type kitty-direct --logo-width 30 --logo-height 15'
-
+alias fastfetch2='fastfetch --logo ~/.config/fastfetch/profile.png --logo-type kitty-direct --logo-width 30 --logo-height 15'
+alias dlaudio='yt-dlp -x --audio-format mp3'
+alias rpi-imager='sudo env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=$WAYLAND_DISPLAY QT_QPA_PLATFORM=wayland rpi-imager'
 # Variables
 set -gx EDITOR helix
 set -gx VOLUME_STEP 5
@@ -28,7 +30,6 @@ set -gx BRIGHTNESS_STEP 5
 set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
 set -gx PATH $HOME/.cargo/bin $PATH
 set -gx PATH $HOME/go/bin $PATH
-
 set fish_vi_force_cursor
 set fish_cursor_default block
 set fish_cursor_insert line blink

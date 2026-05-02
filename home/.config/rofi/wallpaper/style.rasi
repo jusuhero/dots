@@ -80,7 +80,8 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     // background-color:            black;
-    background-image:          url("~/.config/rofi/images/eva_ui.png", height); 
+    // background-image:          url("~/.config/rofi/images/eva_ui.png", height); 
+    background-image:          url("~/.config/rofi/images/eva_ui2.png", height); 
     children:                    [ "inputbar", "listview", "mode-switcher" ];
 }
 

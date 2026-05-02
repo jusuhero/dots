@@ -5,6 +5,7 @@ binds {
     Mod+B           { spawn-sh "firefox"; }
     Mod+E           { spawn-sh "thunar"; }
     Mod+L           { spawn-sh "hyprlock"; }
+    // Mod+L           { spawn-sh "~/.local/share/quickshell-lockscreen/lock.sh"; }
     Mod+C           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
     Mod+W           { spawn-sh "~/.config/rofi/wallpaper/wallpaper.sh"; }
     Mod+H           { spawn-sh "fish -c 'toggle-waybar top'";}
@@ -12,6 +13,7 @@ binds {
     Mod+D           { spawn "vesktop";}
     Mod+N            { spawn "swaync-client -t -sw";}
     Mod+SPACE hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/launchers/eva.sh"; }
+    Mod+Ctrl+Space {spawn-sh "kando --menu Ju";}
     // Backlight and Audio
     XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "brightnessctl set +5%" ; }
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl set 5%-" ; }

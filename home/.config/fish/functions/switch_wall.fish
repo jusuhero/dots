@@ -25,7 +25,7 @@ function switch_wall --argument-names input_path
 
     switch "$XDG_CURRENT_DESKTOP"
         case Hyprland hyprland
-            hyprctl hyprpaper reload ,"$abs"
+            hyprctl hyprpaper wallpaper ",$abs"
             notify-send "Wallpaper switched (Hyprland)" "$abs"
 
         case niri

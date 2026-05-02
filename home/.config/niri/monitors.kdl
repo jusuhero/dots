@@ -1,0 +1,8 @@
+output "Dell Inc. DELL S2722DGM 9CLFZ83" {
+    mode "2560x1440@144.000"
+    scale 1.5
+}
+
+output "eDP-2" {
+    mode "1024x768@120.001"
+}
