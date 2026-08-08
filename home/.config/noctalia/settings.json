@@ -710,6 +710,20 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#ffb4a9",
+                    "#e7bdb7",
+                    "#dfc38c",
+                    "#ffb4ab"
+                ],
+                "path": "/home/ju/wallpapers/Anime/8740.jpg",
+                "useWallpaperColors": true
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",

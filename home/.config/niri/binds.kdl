@@ -83,8 +83,7 @@ binds {
     Print       { screenshot; }
     Ctrl+Print  { screenshot-window; }
     Shift+Print { screenshot-screen; }
-
-    Mod+Shift+S           { spawn-sh "grim -g '$(slurp)'' - | swappy -f -"; }
+    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
     Mod+Shift+P           { spawn-sh "fish -c screenshot_to_file";}
     Mod+P           { spawn-sh "fish -c screenshot_selection";}
 
