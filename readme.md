@@ -20,11 +20,11 @@ git clone https://github.com/jusuhero/dots.git
 cd dots
 sudo pacman -S $(cat packs)
 ```
-Also there are some AUR packages I am using. Install with an AUR Helper, for example paru or yay
+Also there are some AUR packages I am using. The full list is kept in `aurpacks`; install them with an AUR helper, for example paru or yay:
 ```sh
-paru -S hyprshade-git bibata-cursor-git waybar-cava tty-clock
-
+paru -S $(cat aurpacks)
 ```
+This installs `waybar-cava` (waybar built with cava audio support), `noctalia-shell` (niri shell), and the rest. Note: the cursor set is `bibata-cursor-theme`, which provides the `Bibata-Modern-Classic` cursor configured in `hypr/env.lua`.
 Use rsync to copy configs from the repo to your home directory. Existing files will be backed up with a .bak suffix:
 ```bash
 rsync -avh --backup --suffix=.bak home/ ~/
@@ -42,7 +42,7 @@ command = "tuigreet --time --cmd 'uwsm start -eD Hyprland hyprland.desktop'"
 Log out and back in and changes should be active.
 
 > [!NOTE]  
-> I recently started experimenting with the window manager niri, therefore I have also included my niri config here. I use niri with the noctalia shell. If you want to use it install the following package and copy the `home/.config/niri` folder from this repo into your config directory.
+> I recently started experimenting with the window manager niri, therefore I have also included my niri config here. I use niri with the noctalia shell. If you want to use it install the following package and copy both the `home/.config/niri` and `home/.config/noctalia` folders from this repo into your config directory.
 ```
 paru -S noctalia-shell
 ```
@@ -102,13 +102,13 @@ paru -S noctalia-shell
 
 <kbd>MOD</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd> = Kill Hyprland session
 
-For more keybinds please look directly into `dots/.config/hypr/keybinds.conf` because I just outlined the most important for me 
+For more keybinds please look directly into `dots/.config/hypr/keybinds.lua` because I just outlined the most important for me 
 
 ## Programs
 
 ### waybar
 There are two bars available. Press <kbd>MOD</kbd> + <kbd>H</kbd> for the main bar at the top, press <kbd>MOD</kbd> + <kbd>SHIFT</kbd> + <kbd>H</kbd> for the bottom bar.
-The top waybar is launched on start on Hyprland (see startup script)
+The top waybar is launched on start by the `hyprland_startup` fish function (`~/.config/fish/functions/hyprland_startup.fish`), which is invoked from `hypr/hyprland.lua` after Hyprland starts.
 
 I used an earlier version of Mecha Bar by Sejjy as a base (https://github.com/Sejjy/MechaBar), which is a really awesome waybar theme. I have just changed some things according to my liking.
 The package used is waybar-cava (built with cava support) from AUR instead of normal waybar 
